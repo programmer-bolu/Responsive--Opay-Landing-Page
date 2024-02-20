@@ -1,0 +1,1208 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ /* HEADER */
+ header {
+     height: 80px;
+     display: flex;
+     align-items: center;
+     padding: 0 5%;
+     position: fixed;
+     width: 100%;
+     z-index: 100;
+     background-color: white;
+     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.105);
+ }
+
+ .headerimgdiv img {
+     width: 130px;
+ }
+
+ header ul {
+     display: flex;
+     margin-left: 30px;
+     width: 350px;
+     align-items: center;
+     justify-content: space-evenly;
+ }
+
+ header ul li {
+     list-style: none;
+     font-family: "Poppins", sans-serif;
+     font-weight: 600;
+     font-style: normal;
+     font-size: 1.1em;
+     cursor: pointer;
+ }
+
+ header ul li i {
+     position: absolute;
+     margin-top: 5px;
+     margin-left: 5px;
+     animation-duration: .5s;
+     animation-fill-mode: forwards;
+ }
+
+ header ul li a {
+     text-decoration: none;
+     color: black;
+ }
+
+ header ul li:nth-of-type(1) a {
+     color: rgb(100, 215, 187);
+ }
+
+ header ul li .companyDropDown {
+     height: 250px;
+     width: 170px;
+     position: absolute;
+     margin-top: 20px;
+     margin-left: -50px;
+     border-radius: 5px;
+     background-color: rgba(255, 255, 255, 0.9);
+     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.06);
+     z-index: 100;
+ }
+
+ header ul li .companyDropDown div {
+     height: 62.5px;
+     display: flex;
+     align-items: center;
+     padding-left: 20px;
+     font-weight: 400;
+ }
+
+ header ul li .companyDropDown div:hover {
+     animation-name: color-change;
+     animation-duration: .3s;
+     animation-fill-mode: forwards;
+     cursor: pointer;
+ }
+
+ @keyframes color-change {
+     to {
+         background-color: rgb(234, 250, 246);
+         color: rgb(100, 215, 187);
+     }
+ }
+
+ header .barr {
+     display: none;
+     font-size: 2.5em;
+     position: absolute;
+     left: 90%;
+ }
+
+ /* MENU BAR INFORMATIONT */
+ nav {
+     width: 100%;
+     height: calc(100vh - 80px);
+     background-color: white;
+     position: absolute;
+     margin-top: 80px;
+ }
+
+ nav li {
+     list-style-type: none;
+     min-height: 100px;
+     align-items: center;
+     justify-content: flex-start;
+     font-size: 1.5em;
+     font-family: "Poppins", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     color: black;
+     padding-left: 50px;
+     animation-duration: .5s;
+     animation-fill-mode: forwards;
+     padding-top: 32px;
+     border-top: thin solid rgba(32, 15, 96, 0.296);
+     cursor: pointer;
+ }
+
+ .per {
+     border: none;
+ }
+
+ nav a {
+     text-decoration: none;
+ }
+
+ nav li:hover {
+     animation-name: Color;
+     background-color: rgb(243, 246, 246);
+ }
+
+ nav li i {
+     position: absolute;
+     margin-top: 5px;
+     margin-left: 10px;
+     animation-duration: .5s;
+     animation-fill-mode: forwards;
+ }
+
+ nav li .dropDown {
+     margin-top: 20px;
+     font-size: .8em;
+     display: none;
+
+ }
+
+ nav li .dropDown a {
+     color: rgb(0, 0, 61);
+     margin-top: 20px;
+     display: block;
+ }
+
+ /* DROPDOWN ANIMATIONS */
+ @keyframes Color {
+     to {
+         background-color: rgb(243, 246, 246);
+     }
+ }
+
+ @keyframes ext {
+     from {
+         height: 100px;
+     }
+
+     to {
+         height: 300px;
+         background-color: rgb(243, 246, 246);
+     }
+ }
+
+ @keyframes red {
+     from {
+         height: 300px;
+     }
+
+     to {
+         height: 100px;
+         background-color: white;
+     }
+ }
+
+ /* CHEVRON ANGLE ANIMATION */
+ @keyframes bup {
+     to {
+         transform: rotate(180deg);
+         margin-top: 5px;
+     }
+ }
+
+ @keyframes bd {
+     from {
+         transform: rotate(180deg);
+         margin-top: 5px;
+     }
+
+     to {
+         transform: rotate(360deg);
+         margin-top: 5px;
+     }
+ }
+
+ /* MENU BAR ANIMATION */
+ @keyframes sm {
+     50% {
+         transform: scale(0);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes bg {
+     50% {
+         transform: scale(0);
+     }
+
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ /* BACK TO TOP NIVIGATOR */
+ .backToTop {
+     width: 40px;
+     height: 40px;
+     position: fixed;
+     margin-top: 90vh;
+     border: medium solid rgb(29, 201, 155);
+     border-radius: 50%;
+     margin-left: 90%;
+     z-index: 10000000;
+     background-color: rgb(36, 189, 148);
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+     animation-name: opa;
+     color: white;
+     font-size: 1.2em;
+     align-items: center;
+     justify-content: center;
+ }
+
+ /* BACK TO TOP ANIMATION APPEAR*/
+ @keyframes opa {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1
+     }
+ }
+
+ /* FIRST SECTION STARTS HERE */
+ .firstSection-heroSection {
+     min-height: 600px;
+     width: 100%;
+     position: relative;
+     top: 80px;
+     background-image: url(./Image/home01.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
+
+ .firstSection-heroSection .heroText {
+     width: 100%;
+     padding: 20px;
+     min-height: inherit;
+ }
+
+ .firstSection-heroSection .heroText h1 {
+     width: 60%;
+     color: white;
+     font-size: 400%;
+     font-family: "Poppins", sans-serif;
+     font-weight: 900;
+     font-style: normal;
+     word-spacing: 5px;
+     margin: 50px 0 0 50px;
+     letter-spacing: -2px;
+     animation-name: slide-up;
+     animation-duration: 1.5s;
+     animation-fill-mode: forwards;
+ }
+
+ /* LOADPAGE ANIMATION */
+ @keyframes slide-up {
+     from {
+         transform: translateY(50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0px);
+         opacity: 1;
+     }
+ }
+
+ .firstSection-heroSection .heroText p {
+     width: 50%;
+     padding: 10px;
+     margin: 0px 0px 0px 50px;
+     font-size: 1.1em;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 40px;
+     color: rgb(62, 50, 121);
+     animation-name: slide-up2x;
+     animation-duration: 1s;
+     animation-delay: .5s;
+     animation-fill-mode: forwards;
+     opacity: 0;
+ }
+
+ /* LOADPAGE ANIMATION */
+ @keyframes slide-up2x {
+     from {
+         transform: translateY(100px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0px);
+         opacity: 1;
+     }
+ }
+
+ .firstSection-heroSection .heroText .cbnLicenseImg {
+     margin-left: 60px;
+     width: 400px;
+ }
+
+ .firstSection-heroSection .heroText .downloadApp {
+     margin-left: 50px;
+     margin-top: 20px;
+     display: flex;
+     align-items: center;
+     width: 300px;
+     height: 70px;
+     justify-content: space-between;
+ }
+
+ .firstSection-heroSection .heroText .downloadApp svg {
+     width: 130px;
+     cursor: pointer;
+ }
+
+ /* SECTION TWO BEGINS */
+ .OurServices-Carousel {
+     min-height: 600px;
+     margin-top: 120px;
+ }
+
+ .OurServices-Carousel .scrollItems {
+     overflow-x: hidden;
+     overflow-y: hidden;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     width: 90%;
+     margin: auto;
+     column-gap: 30px;
+ }
+
+ .OurServices-Carousel .scrollItems::-webkit-scrollbar {
+     display: none;
+ }
+
+ .OurServices-Carousel .scrollItems div {
+     width: 200px;
+     height: 220px;
+     border-radius: 10px;
+     padding: 10px;
+     background-color: rgb(248, 251, 255);
+     margin-top: 300px;
+     position: relative;
+ }
+
+ .OurServices-Carousel .scrollItems div img {
+     width: 150px;
+     position: absolute;
+     margin-top: -260px;
+     margin-left: 40px;
+ }
+
+ .OurServices-Carousel .scrollItems div svg {
+     fill: rgb(108, 220, 191);
+     margin-top: 20px;
+ }
+
+ .OurServices-Carousel .scrollItems div h2 {
+     font-size: .9em;
+     font-family: "Poppins", sans-serif;
+     font-weight: 600;
+     font-style: normal;
+     color: rgb(54, 39, 112);
+     margin-top: 50px;
+ }
+
+ .OurServices-Carousel .scrollItems div p {
+     font-size: .6em;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     color: rgb(108, 220, 191);
+     padding: 10px 5px 20px 0;
+ }
+
+ .OurServices-Carousel .scrollItems div:hover h2,
+ .OurServices-Carousel .scrollItems div:hover p {
+     color: white;
+ }
+
+ .OurServices-Carousel .scrollItems div:hover svg {
+     fill: white;
+ }
+
+ .OurServices-Carousel .scrollItems div:hover {
+     background-color: rgb(29, 201, 155);
+ }
+
+ .OurServices-Carousel h1 {
+     margin: 50px 5%;
+     font-size: 3.5em;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 700;
+     color: rgb(33, 15, 96);
+ }
+
+ /* OUR SERVICE SLIDER CONTROLS */
+ .OurServices-Carousel .controls {
+     position: absolute;
+     margin-top: -300px;
+     width: 50px;
+     height: 50px;
+     font-size: 1.4em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+ }
+
+ .OurServices-Carousel #nex {
+     left: calc(100% - 50px - 2%);
+ }
+
+ .OurServices-Carousel #pre {
+     margin-left: 2%;
+ }
+
+ /* THIRD SECTION STARTS HERE */
+ .fundYourAccount {
+     width: 100%;
+     min-height: 500px;
+     background-color: rgb(29, 201, 155);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .fundYourAccount .flexcarrier {
+     display: flex;
+     align-items: center;
+     min-height: 400px;
+     justify-content: space-around;
+ }
+
+ .fundYourAccount .flexcarrier div {
+     width: 35%;
+     padding: 15px;
+ }
+
+ .fundYourAccount .flexcarrier .FundYourAccountText h1 {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 2.5em;
+     animation-name: slide-up;
+     animation-duration: 1.5s;
+     animation-fill-mode: forwards;
+     animation-play-state: paused;
+ }
+
+ .fundYourAccount .flexcarrier .FundYourAccountText p {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.6em;
+     line-height: 40px;
+     margin-top: 20px;
+     animation-name: slide-up2x;
+     animation-duration: 1s;
+     animation-delay: .5s;
+     animation-fill-mode: forwards;
+     opacity: 0;
+     animation-play-state: paused;
+ }
+
+ .fundYourAccount .flexcarrier .fleximg img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ /* THIRD SECTION STARTS HERE */
+ .Cards {
+     width: 100%;
+     min-height: 500px;
+     background-color: rgb(244, 252, 250);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .Cards .flexcarrier {
+     display: flex;
+     align-items: center;
+     min-height: 400px;
+     justify-content: space-around;
+ }
+
+ .Cards .flexcarrier div {
+     width: 35%;
+     padding: 15px;
+ }
+
+ .Cards .flexcarrier .CardsText h1 {
+     color: rgb(29, 201, 155);
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 2.5em;
+ }
+
+ .Cards .flexcarrier .CardsText p {
+     color: rgb(33, 15, 96);
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.6em;
+     line-height: 40px;
+     margin-top: 20px;
+ }
+
+ .Cards .flexcarrier .fleximghidden {
+     display: none;
+ }
+
+ .Cards .flexcarrier .fleximg img,
+ .Cards .flexcarrier .fleximghidden img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ /* FORTH SECTION STARTS HERE */
+ .Owealth {
+     width: 100%;
+     min-height: 500px;
+     background-color: rgb(29, 201, 155);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .Owealth .flexcarrier {
+     display: flex;
+     align-items: center;
+     min-height: 400px;
+     justify-content: space-around;
+ }
+
+ .Owealth .flexcarrier div {
+     width: 35%;
+     padding: 15px;
+ }
+
+ .Owealth .flexcarrier .OwealthText h1 {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 2.5em;
+ }
+
+ .Owealth .flexcarrier .OwealthText p {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.6em;
+     line-height: 40px;
+     margin-top: 20px;
+ }
+
+ .Owealth .flexcarrier .fleximg img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ /* FIFTH SECTION STARTS HERE */
+ .download {
+     min-height: 400px;
+     background-color: rgb(237, 237, 237);
+     padding-bottom: 30px;
+ }
+
+ .download .scan {
+     min-height: 400px;
+     width: 50%;
+     margin-left: 50%;
+ }
+
+ .download .scan svg {
+     width: 200px;
+     height: 200px;
+     margin: 50px;
+ }
+
+ .download .scan h1 {
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     padding: 0px 50px;
+     font-size: 2em;
+     color: rgb(52, 73, 94);
+     margin-top: -30px;
+ }
+
+ .download .scan .downloadApp {
+     margin-top: 20px;
+     width: 400px;
+     display: flex;
+     align-items: center;
+     height: 70px;
+     justify-content: center;
+ }
+
+ .download .scan .downloadApp svg {
+     width: 150px;
+     cursor: pointer;
+ }
+
+ /* SECTION SEVEN STARTS HERE #WHAT OUR CUSTOMER THINKS */
+ .customer-review {
+     min-height: 500px;
+ }
+
+ .customer-review .custText {
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 3em;
+     margin: 50px 5%;
+     color: rgb(33, 15, 96);
+ }
+
+ .customer-review .VideoSlider {
+     width: 90%;
+     margin: auto;
+     min-height: 450px;
+     display: grid;
+     overflow-x: hidden;
+     overflow-y: hidden;
+     grid-template-columns: repeat(9, 1fr);
+     column-gap: 50px;
+ }
+
+ .customer-review .VideoSlider::-webkit-scrollbar {
+     display: none;
+ }
+
+ .customer-review .VideoSlider div {
+     width: 350px;
+ }
+
+ .customer-review .VideoSlider div .vidimg {
+     height: 350px;
+     border-radius: 20px;
+ }
+
+ .customer-review .VideoSlider div p {
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     color: rgb(156, 167, 177);
+     margin: 20px 0;
+ }
+
+ .customer-review .VideoSlider div li {
+     list-style-type: none;
+     font-size: .6em;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     color: rgb(156, 167, 177);
+ }
+
+ .customer-review .VideoSlider div .vidimg .videoimage {
+     width: inherit;
+     height: inherit;
+     cursor: pointer;
+ }
+
+ .customer-review .VideoSlider div .vidimg .videoplayicon {
+     z-index: 10;
+     top: -230px;
+     width: 100px;
+     position: relative;
+     margin-left: calc(350px - 100px - 120px);
+ }
+
+ .largeVideoPlayer {
+     width: 100%;
+     height: calc(100vh - 80px);
+     background-color: rgba(0, 0, 0, 0.814);
+     display: none;
+     align-items: center;
+     justify-content: center;
+     position: fixed;
+     top: 80px;
+     left: 0px;
+     z-index: 10000000000000;
+ }
+
+ .largeVideoPlayer .vid {
+     height: 400px;
+     width: 1000px;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 6em;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     color: black;
+     filter: opacity(.9);
+ }
+
+ .videoSliderControl {
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     margin-top: -350px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 2em;
+ }
+
+ #vidnex {
+     margin-left: 1.5%
+ }
+
+ #vidpre {
+     margin-left: calc(100% - 50px - 1.5%);
+ }
+
+ /* SECTION EIGHT BEGINS */
+ .yourSecurity {
+     min-height: 500px;
+     background-color: rgb(29, 201, 155);
+     margin-top: 50px;
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+ .yourSecurity div {
+     width: 40%;
+     padding-top: 70px;
+
+ }
+
+ .yourSecurity .pic img {
+     display: block;
+     width: 100%;
+     cursor: pointer;
+ }
+
+ .yourSecurity .pic img:nth-of-type(2) {
+     margin-top: 30px;
+ }
+
+ .yourSecurity .tex h1 {
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 3em;
+     padding: 5px;
+     line-height: 60px;
+     color: rgb(33, 15, 96);
+ }
+
+ .yourSecurity .tex h2 {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 2em;
+     margin-top: 20px;
+     padding: 5px;
+ }
+
+ .yourSecurity .tex p {
+     color: white;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     margin-top: 5px;
+     line-height: 30px;
+     padding: 5px;
+ }
+
+ /* NINTH SECTION BEGINS */
+ .yourSatisfaction {
+     min-height: 600px;
+     background-color: rgb(248, 251, 255);
+     display: flex;
+     justify-content: space-evenly;
+     padding: 100px 0;
+ }
+
+ .yourSatisfaction div {
+     width: 45%;
+ }
+
+ .yourSatisfaction div h1 {
+     padding: 50px;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 3em;
+     line-height: 60px;
+     color: rgb(33, 15, 96);
+ }
+
+ .yourSatisfaction div p {
+     color: rgb(33, 15, 96);
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.6em;
+     line-height: 40px;
+     padding-left: 50px;
+     padding-right: 70px;
+ }
+
+ .yourSatisfaction div li {
+     list-style-type: none;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: .9em;
+     color: rgb(33, 15, 96);
+     padding-left: 70px;
+     margin-top: 20px;
+ }
+
+ .yourSatisfaction div li img {
+     width: 20px;
+
+ }
+
+ .yourSatisfaction div img {
+     width: 100%;
+     margin-top: 30px;
+     border-radius: 10px;
+ }
+
+ /* TENTH SECTION BEGINS HERE */
+ .mainvid {
+     min-height: 300px;
+     background-color: rgb(217, 217, 217);
+     padding-bottom: 100px;
+ }
+
+ .mainvid video {
+     width: 70%;
+     border-top: thin solid black;
+     display: block;
+     margin: auto;
+ }
+
+ /* FOOTER STARTS HERE */
+ footer {
+     min-height: 200px;
+     background-color: rgb(29, 207, 159);
+     display: flex;
+     color: white;
+     padding: 50px 0;
+ }
+
+ footer ul {
+     margin-left: 100px;
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     cursor: pointer;
+ }
+
+ footer ul li {
+     font-size: .6em;
+     list-style-type: none;
+     margin-top: 10px;
+     line-height: 20px;
+ }
+
+ /* END STARTS HERE */
+ .end {
+     min-height: 100px;
+     background-color: rgb(210, 245, 236);
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding-bottom: 10px;
+ }
+
+ .end div {
+     font-family: "Poppins", sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.1em;
+ }
+ .end .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .end .social div{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(192,222,223);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9em;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width: 1120px) {
+     .fundYourAccount .flexcarrier div {
+         width: 50%;
+     }
+
+     .Cards .flexcarrier div {
+         width: 50%;
+     }
+
+     .Owealth .flexcarrier div {
+         width: 50%;
+     }
+
+     .yourSecurity div {
+         width: 48%;
+     }
+
+     .yourSatisfaction div {
+         width: 48%;
+     }
+ }
+
+ @media (max-width: 968px) {
+     header ul {
+         display: none;
+     }
+
+     header .barr {
+         display: block;
+     }
+
+     .download {
+         display: none;
+     }
+
+     .yourSecurity {
+         display: block;
+     }
+
+     .yourSecurity div {
+         width: 90%;
+         margin: auto;
+         padding-bottom: 50px;
+     }
+
+     .yourSecurity .tex h2 {
+         color: rgb(33, 15, 96);
+     }
+
+     .yourSecurity .tex h1 {
+         color: white;
+     }
+
+     .yourSatisfaction {
+         display: block;
+         background-color: rgb(33, 15, 96);
+     }
+
+     .yourSatisfaction div {
+         width: 100%;
+         margin: auto;
+         color: white;
+         padding: 0;
+     }
+
+     .yourSatisfaction div h1,
+     .yourSatisfaction div p,
+     .yourSatisfaction div li {
+         color: white;
+         padding: 2%;
+         margin-left: 0;
+     }
+
+     .mainvid {
+         display: none;
+     }
+     footer{
+        display: block;
+     }
+     footer ul{
+        margin-top: 50px;
+        font-size: 2em;
+     }
+ }
+
+ @media (max-width: 860px) {
+     .firstSection-heroSection .heroText h1 {
+         width: 95%;
+         margin: auto;
+         font-size: 3em;
+     }
+
+     .firstSection-heroSection .heroText p {
+         width: 95%;
+         margin: auto;
+     }
+
+     .firstSection-heroSection .heroText .cbnLicenseImg {
+         width: 250px;
+         margin-left: 2.5%;
+     }
+
+     .firstSection-heroSection .heroText .downloadApp {
+         width: 200px;
+         margin-left: 2.5%;
+     }
+
+     .firstSection-heroSection .heroText .downloadApp svg {
+         width: 90px;
+     }
+
+     .fundYourAccount .flexcarrier {
+         display: block;
+         padding-top: 40px;
+     }
+
+     .fundYourAccount .flexcarrier div {
+         width: 90%;
+         margin: auto;
+     }
+
+     .fundYourAccount .flexcarrier .fleximg {
+         margin-top: 40px;
+     }
+
+     .Cards .flexcarrier {
+         display: block;
+         padding-top: 40px;
+     }
+
+     .Cards .flexcarrier div {
+         width: 90%;
+         margin: auto;
+     }
+
+     .Cards .flexcarrier .fleximg {
+         margin-top: 40px;
+         display: none;
+     }
+
+     .Cards .flexcarrier .fleximghidden {
+         display: block;
+     }
+
+     .Owealth .flexcarrier {
+         display: block;
+         padding-top: 40px;
+     }
+
+     .Owealth .flexcarrier div {
+         width: 90%;
+         margin: auto;
+     }
+
+     .Owealth .flexcarrier .fleximg {
+         margin-top: 40px;
+     }
+     .end{
+        display: block;
+     }
+     .end div{
+        margin: 20px 5px;
+     }
+     .end .social {
+        margin-left: 0px;
+        width: 200px;
+     }
+ }
+
+ @media (max-width: 430px) {
+     .backToTop {
+         margin-left: 80%;
+     }
+
+     .firstSection-heroSection .heroText p {
+         text-align: center;
+         width: 100%;
+     }
+
+     .firstSection-heroSection .heroText h1 {
+         text-align: center;
+         font-size: 2em;
+         word-spacing: 2px;
+         width: 100%;
+     }
+
+     .firstSection-heroSection .heroText .downloadApp {
+         width: 95%;
+         margin: auto;
+     }
+
+     .firstSection-heroSection .heroText .downloadApp svg {
+         width: 40%;
+     }
+
+     .firstSection-heroSection .heroText .cbnLicenseImg {
+         margin: auto;
+         width: 90%;
+         display: block;
+     }
+
+     .OurServices-Carousel h1 {
+         width: 100%;
+         text-align: center;
+         margin-left: 0px;
+         font-size: 2em;
+     }
+
+     header .barr {
+         left: 80%;
+     }
+     footer ul{
+        margin-top: 50px;
+        font-size: 1.5em;
+        margin-left: 10px;
+     }
+     .firstSection-heroSection{
+        background-image: url(./Image/headerBannerMobile.jpg);
+     }
+ }
