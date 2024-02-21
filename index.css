@@ -15,6 +15,8 @@
      z-index: 100;
      background-color: white;
      box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.105);
+     animation-duration: 1s;
+     animation-fill-mode: forwards;
  }
 
  .headerimgdiv img {
@@ -107,7 +109,7 @@
 
  nav li {
      list-style-type: none;
-     min-height: 100px;
+     min-height: 80px;
      align-items: center;
      justify-content: flex-start;
      font-size: 1.5em;
@@ -118,7 +120,7 @@
      padding-left: 50px;
      animation-duration: .5s;
      animation-fill-mode: forwards;
-     padding-top: 32px;
+     padding-top: 30px;
      border-top: thin solid rgba(32, 15, 96, 0.296);
      cursor: pointer;
  }
@@ -145,14 +147,14 @@
  }
 
  nav li .dropDown {
-     margin-top: 20px;
+     margin-top: 40px;
      font-size: .8em;
      display: none;
 
  }
 
  nav li .dropDown a {
-     color: rgb(0, 0, 61);
+     color: rgb(225, 223, 223);
      margin-top: 20px;
      display: block;
  }
@@ -160,28 +162,31 @@
  /* DROPDOWN ANIMATIONS */
  @keyframes Color {
      to {
-         background-color: rgb(243, 246, 246);
+         background-color: rgb(70, 71, 71);
+         color: white;
      }
  }
 
  @keyframes ext {
      from {
-         height: 100px;
+         height: 80px;
      }
 
      to {
-         height: 300px;
-         background-color: rgb(243, 246, 246);
+         height: 280px;
+         background-color: rgb(70, 71, 71);
+         color: white;
      }
  }
 
  @keyframes red {
      from {
-         height: 300px;
+         height: 280px;
+         background-color: rgb(70, 71, 71);
      }
 
      to {
-         height: 100px;
+         height: 80px;
          background-color: white;
      }
  }
@@ -439,21 +444,19 @@
  .OurServices-Carousel .controls {
      position: absolute;
      margin-top: -300px;
-     width: 50px;
-     height: 50px;
+     width: 20px;
+     height: 100%;
      font-size: 1.4em;
      display: flex;
-     align-items: center;
-     justify-content: center;
      border-radius: 50%;
  }
 
  .OurServices-Carousel #nex {
-     left: calc(100% - 50px - 2%);
+     left: calc(100% - 20px - 1%);
  }
 
  .OurServices-Carousel #pre {
-     margin-left: 2%;
+     margin-left: 1%;
  }
 
  /* THIRD SECTION STARTS HERE */
@@ -733,7 +736,7 @@
 
  .largeVideoPlayer .vid {
      height: 400px;
-     width: 1000px;
+     width: 90%;
      background-color: white;
      display: flex;
      align-items: center;
@@ -744,25 +747,55 @@
      background-size: cover;
      color: black;
      filter: opacity(.9);
+     background-image: linear-gradient(grey, grey, black);
+ }
+
+ .largeVideoPlayer .vid .position {
+     position: absolute;
+     width: 90%;
+     background-image: linear-gradient(to right, rgb(111, 111, 111), white, white, white, white, white);
+     height: 5px;
+     margin: auto;
+     margin-top: 300px;
+ }
+
+ .largeVideoPlayer .vid .playIcon {
+     position: absolute;
+     width: 70px;
+ }
+
+ .largeVideoPlayer .vid .turn {
+     animation-name: spin;
+     animation-duration: 2s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+
+ @keyframes spin {
+     50% {
+         transform: rotate(100deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
  }
 
  .videoSliderControl {
-     width: 50px;
-     height: 50px;
+     width: 20px;
+     height: 100%;
      position: absolute;
      margin-top: -350px;
      display: flex;
-     align-items: center;
-     justify-content: center;
-     font-size: 2em;
+     font-size: 1.2em;
  }
 
  #vidnex {
-     margin-left: 1.5%
+     margin-left: 1%
  }
 
  #vidpre {
-     margin-left: calc(100% - 50px - 1.5%);
+     margin-left: calc(100% - 20px - 1%);
  }
 
  /* SECTION EIGHT BEGINS */
@@ -930,62 +963,26 @@
      font-weight: 400;
      font-size: 1.1em;
  }
- .end .social{
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- .end .social div{
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(192,222,223);
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .9em;
+
+ .end .social {
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
+ .end .social div {
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+     background-color: rgb(192, 222, 223);
+     margin-left: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: .9em;
+ }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ /* MEDIA QUERY STARTS HERE */
  @media (max-width: 1120px) {
      .fundYourAccount .flexcarrier div {
          width: 50%;
@@ -1062,12 +1059,14 @@
      .mainvid {
          display: none;
      }
-     footer{
-        display: block;
+
+     footer {
+         display: block;
      }
-     footer ul{
-        margin-top: 50px;
-        font-size: 2em;
+
+     footer ul {
+         margin-top: 50px;
+         font-size: 2em;
      }
  }
 
@@ -1081,6 +1080,8 @@
      .firstSection-heroSection .heroText p {
          width: 95%;
          margin: auto;
+         color: black;
+         font-weight: 600;
      }
 
      .firstSection-heroSection .heroText .cbnLicenseImg {
@@ -1143,15 +1144,18 @@
      .Owealth .flexcarrier .fleximg {
          margin-top: 40px;
      }
-     .end{
-        display: block;
+
+     .end {
+         display: block;
      }
-     .end div{
-        margin: 20px 5px;
+
+     .end div {
+         margin: 20px 5px;
      }
+
      .end .social {
-        margin-left: 0px;
-        width: 200px;
+         margin-left: 0px;
+         width: 200px;
      }
  }
 
@@ -1197,12 +1201,625 @@
      header .barr {
          left: 80%;
      }
-     footer ul{
-        margin-top: 50px;
-        font-size: 1.5em;
-        margin-left: 10px;
+
+     footer ul {
+         margin-top: 50px;
+         font-size: 1.5em;
+         margin-left: 10px;
      }
-     .firstSection-heroSection{
-        background-image: url(./Image/headerBannerMobile.jpg);
+
+     .firstSection-heroSection .heroText h1 {
+         color: rgb(33, 15, 96);
+     }
+
+     .OurServices-Carousel .scrollItems {
+         overflow: auto;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText h1,
+     .Cards .flexcarrier .CardsText h1 {
+         font-size: 2em;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText p,
+     .Cards .flexcarrier .CardsText p {
+         font-size: 1.1em;
+     }
+
+     .Owealth .flexcarrier .OwealthText p {
+         text-align: center;
+         font-size: 1.1em;
+         color: rgb(0, 0, 61);
+     }
+
+     .Owealth .flexcarrier .OwealthText h1 {
+         text-align: center;
+     }
+
+     .customer-review .custText {
+         font-size: 1.5em;
+         text-align: center;
+     }
+
+     .customer-review .VideoSlider {
+         overflow-x: auto;
+     }
+
+     .yourSecurity .tex h1 {
+         font-size: 2em;
+         line-height: 30px;
+     }
+
+     .yourSatisfaction div h1 {
+         font-size: 2em;
+         line-height: 40px;
+     }
+
+     .yourSatisfaction div p {
+         font-size: 1.2em;
+     }
+
+     header .barr {
+         font-size: 1.5em;
+     }
+
+     nav li {
+         font-size: 1.3em;
+         padding-left: 20px;
+     }
+
+     .OurServices-Carousel #nex {
+         width: 20px;
+         left: calc(100% - 20px - .2%);
+     }
+
+     .OurServices-Carousel #pre {
+         width: 20px;
+         margin-left: .2%;
+     }
+
+     .largeVideoPlayer .vid {
+         height: 200px;
+         font-size: 2.5em;
+     }
+
+     .largeVideoPlayer .vid .position {
+         margin-top: 150px;
+     }
+
+     .customer-review .VideoSlider {
+         overflow-x: auto;
+     }
+
+     .customer-review .VideoSlider div {
+         width: 200px;
+     }
+
+     .customer-review .VideoSlider div .vidimg {
+         width: 200px;
+         height: 200px;
+     }
+
+     .customer-review .VideoSlider div .vidimg .videoplayicon {
+         width: 50px;
+         margin-left: 80px;
+         margin-top: calc(200px - 50px - 50px);
+         z-index: 1;
+     }
+
+     .largeVideoPlayer .vid .playIcon {
+         width: 30px;
+     }
+
+     #vidnex {
+         margin-left: .2%
+     }
+
+     #vidpre {
+         margin-left: calc(100% - 20px - .2%);
+     }
+ }
+
+ @media (max-height: 250px) {
+     header {
+         height: 40px;
+     }
+
+     .headerimgdiv img {
+         width: 50px;
+     }
+
+     header .barr {
+         font-size: 1em;
+     }
+
+     .firstSection-heroSection {
+         top: 40px;
+         padding-top: 5px;
+     }
+
+     .firstSection-heroSection .heroText h1 {
+         font-size: .8em;
+         width: 100%;
+         padding-top: 0px;
+         margin-top: 0px;
+         letter-spacing: 1px;
+     }
+
+     .firstSection-heroSection .heroText p {
+         padding: 0px;
+         font-size: .7em;
+         line-height: 12px;
+         margin-top: 10px;
+         text-wrap: wrap;
+         width: 100%;
+     }
+
+     .firstSection-heroSection {
+         padding-bottom: 0px;
+         min-height: 150px;
+     }
+
+     .OurServices-Carousel {
+         display: none;
+     }
+
+     .fundYourAccount {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .fundYourAccount .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText {
+         padding-bottom: 10px;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .fundYourAccount .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .Cards {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .Cards .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .Cards .flexcarrier .CardsText {
+         padding-bottom: 10px;
+     }
+
+     .Cards .flexcarrier .CardsText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .Cards .flexcarrier .CardsText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .Cards .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .Owealth {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .Owealth .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .Owealth .flexcarrier .OwealthText {
+         padding-bottom: 10px;
+     }
+
+     .Owealth .flexcarrier .OwealthText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1.5em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .Owealth .flexcarrier .OwealthText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .Owealth .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .customer-review {
+         display: none;
+     }
+
+     .yourSecurity {
+         margin-top: 0px;
+         border-top: medium solid rgb(0, 0, 61);
+     }
+
+     .yourSecurity .tex h1 {
+         font-size: 1.3em;
+         line-height: 20px;
+         text-align: center;
+     }
+
+     .yourSecurity .tex h2 {
+         font-size: 1em;
+     }
+
+     .yourSecurity .tex p {
+         font-size: .9em;
+         line-height: 15px;
+     }
+
+     .yourSecurity .tex {
+         margin-top: 0px;
+         padding-top: 0px;
+     }
+
+     .yourSatisfaction div h1 {
+         font-size: 1.3em;
+         line-height: 20px;
+         text-align: center;
+     }
+
+     .yourSatisfaction div p {
+         font-size: .9em;
+         line-height: 15px;
+         text-align: center;
+         margin-top: 5px;
+     }
+
+     .yourSatisfaction div li {
+         font-size: .3em;
+         margin-top: 0px;
+     }
+
+     footer ul {
+         font-size: .9em;
+         margin-top: 15px;
+     }
+
+     footer ul li {
+         margin-top: 3px;
+     }
+
+     .end {
+         display: none;
+     }
+
+     footer {
+         padding-top: 10px;
+     }
+
+     .backToTop {
+         background-color: white;
+         border: none;
+     }
+
+     nav li {
+         font-size: .9em;
+         min-height: 40px;
+         display: flex;
+         padding-top: 0;
+         padding-left: 5px;
+         margin-top: 0;
+     }
+
+     .per {
+         margin-top: 0;
+     }
+
+     nav .comp {
+         display: none;
+     }
+
+     nav {
+         padding-top: 0;
+     }
+ }
+
+ @media (max-width: 200px) {
+     header {
+         height: 40px;
+     }
+
+     .headerimgdiv img {
+         width: 50px;
+     }
+
+     header .barr {
+         font-size: 1em;
+     }
+
+     .firstSection-heroSection {
+         top: 40px;
+         padding-top: 5px;
+     }
+
+     .firstSection-heroSection .heroText h1 {
+         font-size: .8em;
+         width: 100%;
+         padding-top: 0px;
+         margin-top: 0px;
+         letter-spacing: 1px;
+     }
+
+     .firstSection-heroSection .heroText p {
+         padding: 0px;
+         font-size: .7em;
+         line-height: 12px;
+         margin-top: 10px;
+         text-wrap: wrap;
+         width: 100%;
+     }
+
+     .firstSection-heroSection {
+         padding-bottom: 0px;
+         min-height: 150px;
+     }
+
+     .OurServices-Carousel {
+         display: none;
+     }
+
+     .fundYourAccount {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .fundYourAccount .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText {
+         padding-bottom: 10px;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .fundYourAccount .flexcarrier .FundYourAccountText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .fundYourAccount .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .Cards {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .Cards .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .Cards .flexcarrier .CardsText {
+         padding-bottom: 10px;
+     }
+
+     .Cards .flexcarrier .CardsText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .Cards .flexcarrier .CardsText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .Cards .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .Owealth {
+         padding-top: 10px;
+         min-height: 100px;
+     }
+
+     .Owealth .flexcarrier div {
+         padding-top: 0px;
+         margin: 0px;
+         width: 100%;
+     }
+
+     .Owealth .flexcarrier .OwealthText {
+         padding-bottom: 10px;
+     }
+
+     .Owealth .flexcarrier .OwealthText h1 {
+         animation: none;
+         padding: 0px;
+         font-size: 1.5em;
+         margin: 0px;
+         text-align: center;
+         width: 100%;
+     }
+
+     .Owealth .flexcarrier .OwealthText p {
+         animation: none;
+         opacity: 1;
+         font-size: .8em;
+         width: 100%;
+         line-height: 15px;
+         text-align: center;
+     }
+
+     .Owealth .flexcarrier .fleximg {
+         padding: 5px;
+         margin-top: -5px;
+         margin-bottom: 0px;
+     }
+
+     .customer-review {
+         display: none;
+     }
+
+     .yourSecurity {
+         margin-top: 0px;
+         border-top: medium solid rgb(0, 0, 61);
+     }
+
+     .yourSecurity .tex h1 {
+         font-size: 1.3em;
+         line-height: 20px;
+         text-align: center;
+     }
+
+     .yourSecurity .tex h2 {
+         font-size: 1em;
+     }
+
+     .yourSecurity .tex p {
+         font-size: .9em;
+         line-height: 15px;
+     }
+
+     .yourSecurity .tex {
+         margin-top: 0px;
+         padding-top: 0px;
+     }
+
+     .yourSatisfaction div h1 {
+         font-size: 1.3em;
+         line-height: 20px;
+         text-align: center;
+     }
+
+     .yourSatisfaction div p {
+         font-size: .9em;
+         line-height: 15px;
+         text-align: center;
+         margin-top: 5px;
+     }
+
+     .yourSatisfaction div li {
+         font-size: .3em;
+         margin-top: 0px;
+     }
+
+     footer ul {
+         font-size: .9em;
+         margin-top: 15px;
+     }
+
+     footer ul li {
+         margin-top: 3px;
+     }
+
+     .end {
+         display: none;
+     }
+
+     footer {
+         padding-top: 10px;
+     }
+
+     .backToTop {
+         background-color: white;
+         border: none;
+     }
+
+     nav li {
+         font-size: .9em;
+         min-height: 40px;
+         display: flex;
+         padding-top: 0;
+         padding-left: 5px;
+         margin-top: 0;
+     }
+
+     .per {
+         margin-top: 0;
+     }
+
+     nav .comp {
+         display: none;
+     }
+
+     nav {
+         padding-top: 0;
      }
  }

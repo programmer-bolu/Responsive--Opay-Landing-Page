@@ -7,6 +7,7 @@ function Drop() {
         rt.style.animationName = 'bd'
     }
 }
+let lastScrollPosition = 0
 window.onscroll = function(){
     dropdown.hidden = true
     if(window.scrollY >= 950){
@@ -83,10 +84,9 @@ function nextvideo() {
         behavior: 'smooth'
     })
 }
-function playvideo(message) {
+function playvideo() {
     videoplayer.style.display = 'flex'
     document.getElementById('body').style.overflowY = 'hidden'
-    vid.style.backgroundImage = `url(${message})`
 }
 function endVideo() {
     document.getElementById('body').style.overflowY = 'auto'
