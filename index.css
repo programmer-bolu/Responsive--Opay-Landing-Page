@@ -980,6 +980,7 @@
      align-items: center;
      justify-content: center;
      font-size: .9em;
+     padding: 0px;
  }
 
  /* MEDIA QUERY STARTS HERE */
@@ -1167,6 +1168,8 @@
      .firstSection-heroSection .heroText p {
          text-align: center;
          width: 100%;
+         line-height: 25px;
+         font-size: .9em;
      }
 
      .firstSection-heroSection .heroText h1 {
@@ -1218,22 +1221,25 @@
 
      .fundYourAccount .flexcarrier .FundYourAccountText h1,
      .Cards .flexcarrier .CardsText h1 {
-         font-size: 2em;
+         font-size: 1.5em;
      }
 
      .fundYourAccount .flexcarrier .FundYourAccountText p,
      .Cards .flexcarrier .CardsText p {
-         font-size: 1.1em;
+         font-size: .9em;
+         line-height: 20px;
      }
 
      .Owealth .flexcarrier .OwealthText p {
          text-align: center;
-         font-size: 1.1em;
+         font-size: .9em;
          color: rgb(0, 0, 61);
+         line-height: 20px;
      }
 
      .Owealth .flexcarrier .OwealthText h1 {
          text-align: center;
+         font-size: 1.5em;
      }
 
      .customer-review .custText {
@@ -1246,26 +1252,37 @@
      }
 
      .yourSecurity .tex h1 {
-         font-size: 2em;
+         font-size: 1.5em;
+         line-height: 30px;
+         text-align: center;
+     }
+     .yourSecurity .tex h2 {
+        font-size: 1.1em;
+        line-height: 30px;
+    }
+    .yourSecurity .tex p {
+        line-height: 22px;
+        margin-top: 0px;
+    }
+     .yourSatisfaction div h1 {
+         font-size: 1.52em;
          line-height: 30px;
      }
 
-     .yourSatisfaction div h1 {
-         font-size: 2em;
-         line-height: 40px;
-     }
-
      .yourSatisfaction div p {
-         font-size: 1.2em;
+         font-size: .9em;
+         line-height: 25px;
      }
-
+     .yourSatisfaction div li{
+        margin-top: 5px;
+     }
      header .barr {
-         font-size: 1.5em;
+         font-size: 1.3em;
      }
 
      nav li {
-         font-size: 1.3em;
-         padding-left: 20px;
+         font-size: 1.1em;
+         padding-left: 15px;
      }
 
      .OurServices-Carousel #nex {
@@ -1317,6 +1334,13 @@
 
      #vidpre {
          margin-left: calc(100% - 20px - .2%);
+     }
+     footer ul{
+        font-size: 1.2em;
+        margin-top: 15px;
+     }
+     footer ul li{
+        margin-top: 1px;
      }
  }
 
