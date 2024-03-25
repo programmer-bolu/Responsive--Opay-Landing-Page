@@ -25,7 +25,6 @@ function shownav(){
         main.style.display = "none"
         document.getElementById("toogle").setAttribute('class', "fa-regular fa-circle-xmark barr")
         nav.hidden = false
-        toogle.style.animationName = "sm"
     }else{
         main.style.display = "block"
         document.getElementById("toogle").setAttribute('class', "fa-solid fa-bars-staggered barr")
@@ -33,7 +32,6 @@ function shownav(){
         toogle.style.animationName = "bg"
         comp.style.animationName = "red"
         dropDown.style.display = "none"
-        rot.style.animationName = 'bd'
     }
 }
 function extend(){
