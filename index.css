@@ -210,28 +210,6 @@
          margin-top: 5px;
      }
  }
-
- /* MENU BAR ANIMATION */
- @keyframes sm {
-     50% {
-         transform: scale(0);
-     }
-
-     100% {
-         transform: scale(1);
-     }
- }
-
- @keyframes bg {
-     50% {
-         transform: scale(0);
-     }
-
-     100% {
-         transform: scale(1);
-     }
- }
-
  /* BACK TO TOP NIVIGATOR */
  .backToTop {
      width: 40px;
